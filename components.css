@@ -1,0 +1,59 @@
+.btn { padding: 13px 20px; border-radius: 14px; font-weight: 800; font-size: .95rem; display: inline-flex; align-items: center; justify-content: center; gap: 8px; transition: transform .2s ease, background .2s ease; }
+.btn:hover { transform: translateY(-2px); }
+.btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 25px rgba(99, 91, 255, .22); }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-light { background: #fff; color: var(--text); border: 1px solid var(--border); }
+.btn-green { background: var(--secondary-dark); color: #fff; }
+.btn-green:hover { background: #066a60; }
+.btn-large { padding: 16px 26px; font-size: 1.02rem; }
+.btn-block { width: 100%; }
+
+.badge { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; background: #eae9ff; color: var(--primary-dark); font-weight: 800; font-size: .84rem; margin-bottom: 18px; }
+.badge--green { background: #e3f8f4; color: var(--secondary-dark); }
+
+.card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 27px; transition: transform .25s, box-shadow .25s; }
+.card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+.card p { color: var(--muted); margin-top: 9px; }
+.card-icon { width: 54px; height: 54px; border-radius: 16px; background: var(--primary-soft); display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 18px; }
+
+.notice { background: #fff8e8; border: 1px solid #ffe0a3; border-radius: 20px; padding: 22px; color: #6d5015; }
+.notice strong { display: block; margin-bottom: 5px; }
+
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 110;
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(99, 91, 255, .35);
+  display: grid;
+  place-items: center;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity .25s ease, transform .25s ease, visibility .25s ease;
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover { background: var(--primary-dark); }
+.back-to-top:focus-visible { outline: 3px solid rgba(99, 91, 255, .4); outline-offset: 3px; }
+
+@media (max-width: 700px) {
+  .back-to-top {
+    right: 14px;
+    bottom: 14px;
+    width: 48px;
+    height: 48px;
+  }
+}

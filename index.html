@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soutien scolaire dans les Ardennes (SSA) – Cours à domicile, 1er cours gratuit</title>
+  <meta name="description" content="Cours particuliers à domicile et aide aux devoirs dans les Ardennes, du primaire au lycée. Premier cours gratuit : réservez en ligne en 2 minutes.">
+  <meta name="theme-color" content="#635bff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://formsubmit.co; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
+  <meta name="referrer-policy" content="strict-origin-when-cross-origin">
+  <meta name="permissions-policy" content="geolocation=(), microphone=(), camera=()">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/booking.css">
+  <script src="js/ui.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Soutien scolaire dans les Ardennes (SSA)",
+    "description": "Cours particuliers à domicile et aide aux devoirs du primaire au lycée, premier cours gratuit.",
+    "areaServed": { "@type": "AdministrativeArea", "name": "Ardennes" }
+  }
+  </script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="logo" aria-label="Soutien scolaire dans les Ardennes – accueil">
+      <span class="logo-icon">SSA</span>
+      <span class="logo-text">Soutien scolaire<small>dans les Ardennes</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
+      <ul id="menu">
+        <li><a href="#cours">Nos cours</a></li>
+        <li><a href="#matieres">Matières</a></li>
+        <li><a href="#fonctionnement">Comment ça marche</a></li>
+        <li><a href="tarifs.html">Tarifs et CESU</a></li>
+        <li><a href="a-propos.html">Qui sommes-nous</a></li>
+      </ul>
+    </nav>
+    <a href="#reservation" class="btn btn-primary header-cta">Réserver mon cours gratuit</a>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container hero-content">
+    <div class="badge badge--green">🎁 Premier cours gratuit</div>
+    <h1>Le soutien scolaire <span>près de chez vous</span>, dans les Ardennes.</h1>
+    <p class="hero-description">
+      Cours particuliers à domicile à Charleville-Mézières et dans les Ardennes, du primaire au lycée.
+      Le premier cours est offert : on fait connaissance, on identifie les difficultés, et vous décidez ensuite sans engagement.
+    </p>
+    <div class="hero-buttons">
+      <a href="#reservation" class="btn btn-primary btn-large">📅 Réserver mon cours gratuit</a>
+      <a href="#matieres" class="btn btn-light btn-large">Voir les matières</a>
+    </div>
+    <div class="hero-trust">
+      <span>✓ Depuis 2021 dans les Ardennes</span>
+      <span>✓ Du primaire au lycée</span>
+      <span>✓ À domicile ou en ligne</span>
+      <span>✓ <span data-free-minutes>1 h</span> offerte, sans engagement</span>
+    </div>
+    <p class="hero-zone">📍 Charleville-Mézières, Sedan, Revin, Rethel…</p>
+  </div>
+</section>
+
+<section class="section" id="cours">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Nos cours</span>
+      <h2>Un accompagnement pour chaque besoin.</h2>
+      <p>Que votre enfant ait besoin d'une explication pour un exercice ou de reprendre confiance, nous nous adaptons à son niveau et à son rythme.</p>
+    </div>
+    <div class="grid-3">
+      <article class="card reveal">
+        <div class="card-icon">🏠</div>
+        <h3>Cours particuliers à domicile</h3>
+        <p>Un professeur se déplace chez vous, dans les Ardennes, pour un suivi personnalisé dans le confort de la maison.</p>
+      </article>
+      <article class="card reveal" style="--d:.07s">
+        <div class="card-icon">📚</div>
+        <h3>Aide aux devoirs</h3>
+        <p>Comprendre un exercice, revoir une notion et apprendre les méthodes pour devenir plus autonome.</p>
+      </article>
+      <article class="card reveal" style="--d:.14s">
+        <div class="card-icon">🧠</div>
+        <h3>Révisions et examens</h3>
+        <p>Fiches, méthodes, organisation et exercices pour préparer les contrôles, le brevet et le bac.</p>
+      </article>
+    </div>
+
+    <div class="feature reveal">
+      <img class="feature-photo" src="images/cours-3.jpg" alt="Un professeur souriant aide deux élèves à faire leurs exercices" width="1000" height="562" loading="lazy">
+      <div class="feature-text">
+        <span class="section-label">Notre approche</span>
+        <h3>Un suivi bienveillant, à son rythme.</h3>
+        <p>Chaque élève avance différemment. Nous prenons le temps de comprendre où il bloque pour lui redonner confiance.</p>
+        <ul class="check-list">
+          <li>Des explications adaptées à son niveau</li>
+          <li>Des méthodes pour devenir plus autonome</li>
+          <li>Les parents sont les bienvenus pendant le cours</li>
+        </ul>
+        <a href="#reservation" class="btn btn-primary">Réserver le cours gratuit</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" id="zone">
+  <div class="container zone">
+    <div class="reveal">
+      <span class="section-label">Où ?</span>
+      <h2>Partout dans les Ardennes.</h2>
+      <p style="color:var(--muted);margin-top:12px">Nous intervenons à domicile dans le département, selon les disponibilités. Les cours en ligne sont aussi possibles.</p>
+    </div>
+    <ul class="zone-list reveal" style="--d:.08s">
+      <li>Charleville-Mézières</li>
+      <li>Sedan</li>
+      <li>Revin</li>
+      <li>Rethel</li>
+      <li>Vouziers</li>
+      <li>Givet</li>
+      <li>Nouzonville</li>
+      <li>Bogny-sur-Meuse</li>
+      <li>Fumay</li>
+      <li>Carignan</li>
+      <li class="more">…et les communes voisines</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section section--white" id="confiance">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Confiance</span>
+      <h2>Un accompagnement simple, proche et rassurant.</h2>
+      <p>Les familles recherchent avant tout un cadre bienveillant, une vraie pédagogie et un accompagnement sans stress.</p>
+    </div>
+    <div class="trust-grid">
+      <article class="trust-card reveal">
+        <div class="trust-emoji">🤝</div>
+        <h3>Des repères clairs</h3>
+        <p>On prend le temps de comprendre les difficultés, de définir les objectifs et d’expliquer les méthodes.</p>
+      </article>
+      <article class="trust-card reveal" style="--d:.06s">
+        <div class="trust-emoji">📍</div>
+        <h3>Proche de chez vous</h3>
+        <p>Nous intervenons dans les Ardennes, avec un accompagnement à domicile ou en ligne selon votre besoin.</p>
+      </article>
+      <article class="trust-card reveal" style="--d:.12s">
+        <div class="trust-emoji">⚡</div>
+        <h3>Réponse rapide</h3>
+        <p>Le premier contact est simple, la prise de rendez-vous est rapide et le premier cours est offert.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" id="temoignages">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Avis parents</span>
+      <h2>Ce que les familles apprécient.</h2>
+    </div>
+    <div class="testimonials-grid">
+      <article class="testimonial-card reveal">
+        <div class="stars">★★★★★</div>
+        <p>“Le professeur a su rassurer notre fils et lui expliquer les méthodes de travail sans le décourager. On a vu une vraie différence en quelques semaines.”</p>
+        <strong>Maman d’un élève de 5e</strong>
+      </article>
+      <article class="testimonial-card reveal" style="--d:.06s">
+        <div class="stars">★★★★★</div>
+        <p>“Très bon contact avec les parents, cours bien préparé, très clair. Le rendez-vous initial nous a beaucoup rassurés avant de commencer.”</p>
+        <strong>Parents à Charleville</strong>
+      </article>
+      <article class="testimonial-card reveal" style="--d:.12s">
+        <div class="stars">★★★★★</div>
+        <p>“Simple, bienveillant et efficace. Le premier cours gratuit nous a permis de tester le cadre sans pression, ce qui a été très appréciable.”</p>
+        <strong>Famille à domicile</strong>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="matieres">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Matières</span>
+      <h2>Besoin d'aide dans une matière ?</h2>
+    </div>
+    <div class="subjects">
+      <div class="subject reveal"><span class="subject-icon">➗</span><strong>Mathématiques</strong><small>Calcul, géométrie, fonctions…</small></div>
+      <div class="subject reveal" style="--d:.04s"><span class="subject-icon">📖</span><strong>Français</strong><small>Grammaire, rédaction, littérature…</small></div>
+      <div class="subject reveal" style="--d:.08s"><span class="subject-icon">🇬🇧</span><strong>Anglais</strong><small>Vocabulaire, oral, compréhension…</small></div>
+      <div class="subject reveal" style="--d:.12s"><span class="subject-icon">🧪</span><strong>Physique-Chimie</strong><small>Notions, exercices, méthodes…</small></div>
+      <div class="subject reveal"><span class="subject-icon">🧬</span><strong>SVT</strong><small>Biologie, géologie, révisions…</small></div>
+      <div class="subject reveal" style="--d:.04s"><span class="subject-icon">🌍</span><strong>Histoire-Géo</strong><small>Dates, cartes, rédactions…</small></div>
+      <div class="subject reveal" style="--d:.08s"><span class="subject-icon">💻</span><strong>Informatique</strong><small>Programmation, algorithmique…</small></div>
+      <div class="subject reveal" style="--d:.12s"><span class="subject-icon">🇪🇸</span><strong>Espagnol</strong><small>Expression, compréhension…</small></div>
+      <div class="subject reveal"><span class="subject-icon">💭</span><strong>Philosophie</strong><small>Dissertation, explication de texte…</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" id="fonctionnement">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Simple</span>
+      <h2>Comment ça marche ?</h2>
+    </div>
+    <div class="steps">
+      <article class="step reveal"><div class="step-number">1</div><h3>Réservez</h3><p>Choisissez un créneau pour le premier cours gratuit, en 2 minutes.</p></article>
+      <article class="step reveal" style="--d:.06s"><div class="step-number">2</div><h3>Rendez-vous avec vous</h3><p>Nous vous rappelons et prenons le temps de vous rencontrer : vous posez toutes vos questions, pas de panique.</p></article>
+      <article class="step reveal" style="--d:.12s"><div class="step-number">3</div><h3>On choisit le meilleur répétiteur</h3><p>Nous choisissons le répétiteur le plus adapté à votre enfant : son niveau, sa matière et sa personnalité.</p></article>
+      <article class="step step--free reveal" style="--d:.18s"><div class="step-number">4</div><h3>Premier cours offert</h3><p>Le répétiteur rencontre votre enfant et fait le point sur ses difficultés.</p></article>
+      <article class="step reveal" style="--d:.24s"><div class="step-number">5</div><h3>Vous décidez</h3><p>Vous continuez si cela vous convient, sans aucun engagement.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="medias" hidden>
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">En images</span>
+      <h2>Découvrez notre façon d'enseigner.</h2>
+    </div>
+    <div class="media-grid" id="mediaGrid"></div>
+    <div class="media-gallery" id="mediaGallery"></div>
+  </div>
+</section>
+
+<section class="section section--white" id="conseils">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Conseils</span>
+      <h2>Parce que les études ne sont pas tout.</h2>
+      <p>Des conseils simples pour mieux travailler et mieux se sentir.</p>
+    </div>
+    <div class="advice">
+      <article class="advice-card study reveal">
+        <div style="font-size:2rem">🎓</div>
+        <h3>Conseils scolaires</h3>
+        <p>Apprendre à mieux travailler sans se sentir dépassé.</p>
+        <ul class="advice-list">
+          <li>✓ Organisation</li>
+          <li>✓ Méthodes de révision</li>
+          <li>✓ Motivation</li>
+          <li>✓ Gestion du temps</li>
+        </ul>
+      </article>
+      <article class="advice-card wellbeing reveal" style="--d:.08s">
+        <div style="font-size:2rem">🌿</div>
+        <h3>Bien-être et confiance</h3>
+        <p>Des ressources pour mieux comprendre ses émotions et traverser les périodes difficiles.</p>
+        <ul class="advice-list">
+          <li>✓ Stress avant les contrôles</li>
+          <li>✓ Confiance en soi</li>
+          <li>✓ Sommeil</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="tarifs">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Tarifs</span>
+      <h2>Simple et transparent.</h2>
+    </div>
+    <div class="prices">
+      <article class="card price-card price-card--free reveal">
+        <h3>Premier cours</h3>
+        <div class="price-amount">Gratuit</div>
+        <small><span data-free-minutes>1 h</span>, sans engagement</small>
+      </article>
+      <article class="card price-card reveal" style="--d:.08s" data-price-card="hour" hidden>
+        <h3>Cours à domicile</h3>
+        <div class="price-amount">dès <span data-price="hour"></span></div>
+        <small>par heure, selon le niveau</small>
+      </article>
+      <article class="card price-card reveal" style="--d:.16s" data-price-card="discount" hidden>
+        <h3>Plus de cours, moins cher</h3>
+        <div class="price-amount">jusqu'à −<span data-price="maxoff"></span></div>
+        <small data-discount-text></small>
+      </article>
+    </div>
+    <p class="price-note reveal"><strong>💳 Paiement par CESU</strong>, avec 50 % de crédit d'impôt. Tout est expliqué pas à pas, nous vous guidons.</p>
+    <p class="reveal" style="text-align:center;margin-top:24px"><a href="tarifs.html" class="btn btn-primary">Voir la grille des tarifs et le paiement CESU</a></p>
+  </div>
+</section>
+
+<section class="section section--white" id="reservation">
+  <div class="container">
+    <div class="booking reveal">
+      <div class="booking-intro">
+        <span class="badge badge--green">🎁 Premier cours gratuit</span>
+        <h2>Réservez le cours gratuit de votre enfant.</h2>
+        <p>Remplissez le formulaire : nous vous recontactons rapidement pour confirmer le créneau. Aucun paiement, aucun engagement.</p>
+        <ul class="booking-perks">
+          <li>1er cours offert</li>
+          <li>Du primaire au lycée</li>
+          <li>À domicile à Charleville-Mézières et dans les Ardennes, ou en ligne</li>
+          <li>Un premier échange simple et bienveillant avant de commencer</li>
+          <li>Paiement par CESU, avec 50 % de crédit d'impôt</li>
+        </ul>
+        <div class="booking-contacts">
+          <a href="mailto:ardennesoutienscolaire08@gmail.com" data-contact="email" data-show-text>✉️ ardennesoutienscolaire08@gmail.com</a>
+          <a href="tel:" data-contact="phone" hidden>📞 Appeler</a>
+          <a href="#" data-contact="whatsapp" hidden>💬 WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <form id="bookingForm" novalidate>
+          <h3>Demande de rendez-vous</h3>
+          <p class="form-sub">2 minutes, réponse sous 24 h.</p>
+
+          <div class="form-row">
+            <div class="field"><label for="parent">Votre nom (parent)</label><input type="text" id="parent" name="parent" autocomplete="name" required></div>
+            <div class="field"><label for="phone">Téléphone</label><input type="tel" id="phone" name="phone" autocomplete="tel" inputmode="tel" placeholder="06 12 34 56 78" required></div>
+          </div>
+          <div class="field"><label for="email">E-mail</label><input type="email" id="email" name="email" autocomplete="email" required></div>
+
+          <div class="form-row">
+            <div class="field"><label for="child">Prénom de l'enfant</label><input type="text" id="child" name="child" autocomplete="off" required></div>
+            <div class="field">
+              <label for="level">Niveau</label>
+              <select id="level" name="level" required>
+                <option value="">Choisir…</option>
+                <option>Primaire (CP – CM2)</option>
+                <option>Collège – 6e</option>
+                <option>Collège – 5e</option>
+                <option>Collège – 4e</option>
+                <option>Collège – 3e</option>
+                <option>Lycée – Seconde</option>
+                <option>Lycée – Première</option>
+                <option>Lycée – Terminale</option>
+                <option>Études supérieures</option>
+              </select>
+            </div>
+          </div>
+
+          <fieldset class="field">
+            <legend>Matière(s) souhaitée(s)</legend>
+            <div class="chips">
+              <label class="chip"><input type="checkbox" name="subject" value="Mathématiques"><span>Maths</span></label>
+              <label class="chip"><input type="checkbox" name="subject" value="Français"><span>Français</span></label>
+              <label class="chip"><input type="checkbox" name="subject" value="Anglais"><span>Anglais</span></label>
+              <label class="chip"><input type="checkbox" name="subject" value="Physique-Chimie"><span>Physique-Chimie</span></label>
+              <label class="chip"><input type="checkbox" name="subject" value="Philosophie"><span>Philosophie</span></label>
+              <label class="chip"><input type="checkbox" name="subject" value="SVT"><span>SVT</span></label>
+              <label class="chip"><input type="checkbox" name="subject" value="Histoire-Géo"><span>Histoire-Géo</span></label>
+              <label class="chip"><input type="checkbox" name="subject" value="Informatique"><span>Informatique</span></label>
+              <label class="chip"><input type="checkbox" name="subject" value="Espagnol"><span>Espagnol</span></label>
+              <label class="chip"><input type="checkbox" name="subject" value="Aide aux devoirs (toutes matières)"><span>Aide aux devoirs</span></label>
+            </div>
+          </fieldset>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="commune">Commune</label>
+              <select id="commune" name="commune" required>
+                <option value="">Choisir…</option>
+                <option>Charleville-Mézières</option>
+                <option>Sedan</option>
+                <option>Revin</option>
+                <option>Rethel</option>
+                <option>Vouziers</option>
+                <option>Givet</option>
+                <option>Nouzonville</option>
+                <option>Bogny-sur-Meuse</option>
+                <option>Fumay</option>
+                <option>Monthermé</option>
+                <option>Carignan</option>
+                <option>Autre commune des Ardennes</option>
+              </select>
+            </div>
+            <fieldset class="field">
+              <legend>Où se déroule le cours ?</legend>
+              <div class="chips">
+                <label class="chip"><input type="radio" name="mode" value="À domicile" checked><span>À domicile</span></label>
+                <label class="chip"><input type="radio" name="mode" value="En ligne"><span>En ligne</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-row">
+            <div class="field"><label for="date1">Date souhaitée</label><input type="date" id="date1" name="date1" required></div>
+            <div class="field"><label for="slot1">Créneau</label><select id="slot1" name="slot1" required></select></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="date2">2<sup>e</sup> choix (facultatif)</label><input type="date" id="date2" name="date2"></div>
+            <div class="field"><label for="slot2">Créneau</label><select id="slot2" name="slot2"></select></div>
+          </div>
+
+          <div class="field"><label for="message">Un message ? (facultatif)</label><textarea id="message" name="message" placeholder="Difficultés, objectifs, contrôle à venir…"></textarea></div>
+
+          <label class="consent">
+            <input type="checkbox" id="consent" required>
+            <span>J'accepte que ces informations soient utilisées uniquement pour me recontacter au sujet de ce cours.</span>
+          </label>
+
+          <p class="form-error" id="formError" role="alert"></p>
+          <button type="submit" class="btn btn-primary btn-large btn-block">📅 Demander mon cours gratuit</button>
+          <p class="form-fine">Gratuit · sans engagement · réponse par téléphone ou e-mail</p>
+        </form>
+
+        <div class="confirm" id="confirm" hidden aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Questions</span>
+      <h2>Vos questions, nos réponses.</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Le premier cours est-il vraiment gratuit ?</summary>
+        <p>Oui. Le premier cours est offert, sans engagement. Il permet au professeur de rencontrer votre enfant et de faire le point sur ses difficultés. Vous décidez ensuite si vous souhaitez continuer.</p>
+      </details>
+      <details>
+        <summary>Où se déroulent les cours ?</summary>
+        <p>À votre domicile dans les Ardennes, selon les disponibilités, ou en ligne si vous le préférez.</p>
+      </details>
+      <details>
+        <summary>Pour quels niveaux ?</summary>
+        <p>Du primaire (CP) au lycée, et aussi pour les études supérieures sur demande.</p>
+      </details>
+      <details>
+        <summary>Puis-je assister au cours ?</summary>
+        <p>Bien sûr. Les parents sont les bienvenus, surtout lors du premier cours.</p>
+      </details>
+      <details>
+        <summary>Pourquoi un rendez-vous avec les parents ?</summary>
+        <p>Parce que confier son enfant demande de la confiance. Avant de commencer, nous prenons le temps de vous rencontrer : vous nous parlez de votre enfant, vous posez toutes vos questions, et vous décidez en toute liberté. Pas de panique, c'est gratuit et sans engagement.</p>
+      </details>
+      <details>
+        <summary>Comment payer les cours ?</summary>
+        <p>Par CESU : vous employez directement l'intervenant et déclarez les heures sur le site officiel du Cesu, qui s'occupe des cotisations et du bulletin de paie. 50 % des sommes vous reviennent en crédit d'impôt. Tout est détaillé sur <a href="tarifs.html#cesu" style="text-decoration:underline">la page Tarifs et paiement CESU</a>.</p>
+      </details>
+      <details>
+        <summary>Comment annuler ou déplacer un cours ?</summary>
+        <p>Il suffit de nous prévenir par téléphone, message ou e-mail.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="sticky-cta" id="stickyCta"><a href="#reservation" class="btn btn-primary btn-large">📅 Réserver mon cours gratuit</a></div>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo"><span class="logo-icon">SSA</span><span class="logo-text">Soutien scolaire<small>dans les Ardennes</small></span></div>
+        <p style="margin-top:15px">Apprendre, comprendre et avancer, dans les études comme dans la vie.</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <ul>
+          <li><a href="#cours">Nos cours</a></li>
+          <li><a href="#matieres">Matières</a></li>
+          <li><a href="tarifs.html">Tarifs et paiement CESU</a></li>
+          <li><a href="a-propos.html">Qui sommes-nous</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Réserver</h4>
+        <ul>
+          <li><a href="#reservation">Cours gratuit</a></li>
+          <li><a href="#faq">Questions</a></li>
+          <li><a href="mailto:ardennesoutienscolaire08@gmail.com" data-contact="email" data-show-text>ardennesoutienscolaire08@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Soutien scolaire dans les Ardennes (SSA). Tous droits réservés.</span>
+      <span>Cours à domicile et aide aux devoirs dans les Ardennes.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/content.js"></script>
+<script src="js/booking.js"></script>
+</body>
+</html>

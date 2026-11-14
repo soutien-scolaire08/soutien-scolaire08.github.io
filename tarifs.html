@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarifs et paiement par CESU – Soutien scolaire dans les Ardennes</title>
+  <meta name="description" content="Tarifs de soutien scolaire à domicile dans les Ardennes, dégressifs selon le nombre de cours par semaine. Paiement par CESU, avec 50 % de crédit d'impôt.">
+  <meta name="theme-color" content="#635bff">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://formsubmit.co; connect-src 'self' https://formsubmit.co; form-action 'self' https://formsubmit.co; frame-ancestors 'none'; object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
+  <meta name="referrer-policy" content="strict-origin-when-cross-origin">
+  <meta name="permissions-policy" content="geolocation=(), microphone=(), camera=()">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/page.css">
+  <script src="js/ui.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container navbar">
+    <a href="index.html" class="logo" aria-label="Soutien scolaire dans les Ardennes – accueil">
+      <span class="logo-icon">SSA</span>
+      <span class="logo-text">Soutien scolaire<small>dans les Ardennes</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navigation principale">
+      <button class="menu-button" id="menuButton" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu">☰</button>
+      <ul id="menu">
+        <li><a href="index.html#cours">Nos cours</a></li>
+        <li><a href="index.html#matieres">Matières</a></li>
+        <li><a href="index.html#fonctionnement">Comment ça marche</a></li>
+        <li><a href="tarifs.html" aria-current="page">Tarifs et CESU</a></li>
+        <li><a href="a-propos.html">Qui sommes-nous</a></li>
+      </ul>
+    </nav>
+    <a href="index.html#reservation" class="btn btn-primary header-cta">Réserver mon cours gratuit</a>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="container">
+    <span class="section-label">Tarifs et paiement</span>
+    <h1>Des tarifs clairs, dégressifs, et jusqu'à 50 % remboursés.</h1>
+    <p>Le premier cours est gratuit. Ensuite, plus vous prévoyez de cours par semaine, moins l'heure coûte. Le paiement se fait par CESU, avec un crédit d'impôt de 50 %.</p>
+    <div class="btn-row">
+      <a href="index.html#reservation" class="btn btn-primary btn-large">📅 Réserver mon cours gratuit</a>
+      <a href="#cesu" class="btn btn-light btn-large">Comprendre le CESU</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="grille">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-label">Grille de tarifs</span>
+      <h2>Le tarif par niveau.</h2>
+      <p>Tarif par heure de cours, à domicile ou en ligne. C'est le salaire net de l'intervenant : les cotisations sociales s'y ajoutent, calculées automatiquement par l'Urssaf (voir plus bas).</p>
+    </div>
+
+    <div class="table-wrap reveal"><table class="price-table" id="priceTable"><caption class="visually-hidden">Tarifs horaires selon le niveau et le nombre de cours par semaine</caption></table></div>
+
+    <div class="callout callout--green reveal">
+      <strong>🎁 Premier cours gratuit (<span data-free-minutes>1 h</span>)</strong>
+      <p>On fait connaissance, on fait le point sur les difficultés, et vous décidez ensuite. Aucun engagement.</p>
+    </div>
+
+    <div class="calc reveal">
+      <h3>Estimez votre budget</h3>
+      <div class="calc-fields">
+        <div class="field"><label for="calcLevel">Niveau de l'élève</label><select id="calcLevel"></select></div>
+        <div class="field"><label for="calcPerWeek">Cours par semaine</label>
+          <select id="calcPerWeek"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
+        <div class="field"><label for="calcDuration">Durée d'un cours</label>
+          <select id="calcDuration"><option value="1">1 h</option><option value="1.5">1 h 30</option><option value="2">2 h</option></select></div>
+      </div>
+      <div class="calc-result" id="calcResult" aria-live="polite"></div>
+      <p class="calc-note">Salaire net, hors cotisations sociales. La moitié de l'ensemble (salaire et cotisations) vous revient en crédit d'impôt.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--white" id="cesu">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Paiement par CESU</span>
+      <h2>Simple, sûr, et avantageux.</h2>
+      <p>Avec le CESU (chèque emploi service universel), vous employez directement l'intervenant : pas d'agence, pas de commission. Vous déclarez les heures sur le site officiel du Cesu, et l'Urssaf s'occupe du reste.</p>
+    </div>
+
+    <div class="grid-3">
+      <article class="card reveal">
+        <div class="card-icon">💶</div>
+        <h3>50 % de crédit d'impôt</h3>
+        <p>La moitié des sommes déclarées vous revient en crédit d'impôt, même si vous n'êtes pas imposable. Plafond de 12 000 € de dépenses par an (soit 6 000 € de crédit), majoré dans certains cas.</p>
+      </article>
+      <article class="card reveal" style="--d:.07s">
+        <div class="card-icon">⚡</div>
+        <h3>L'avance immédiate</h3>
+        <p>Activez l'avance immédiate de crédit d'impôt sur le site du Cesu : vous ne réglez que 50 % tout de suite, sans attendre l'année suivante.</p>
+      </article>
+      <article class="card reveal" style="--d:.14s">
+        <div class="card-icon">🧾</div>
+        <h3>Tout est déclaré, tout est clair</h3>
+        <p>L'Urssaf calcule les cotisations et édite le bulletin de paie. Vous gardez une trace claire de chaque heure, utile pour vos impôts.</p>
+      </article>
+    </div>
+
+    <div class="callout reveal" style="max-width:820px;margin-inline:auto">
+      <strong>Cours à domicile ou en ligne ?</strong>
+      <p>Le crédit d'impôt concerne les services rendus à votre domicile. Pour les cours en ligne, renseignez-vous sur l'éligibilité auprès de l'administration fiscale avant de vous engager.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="demarches">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Vos démarches</span>
+      <h2>Pas à pas, nous restons à vos côtés.</h2>
+      <p>Pas de panique : ces démarches prennent quelques minutes, et nous vous guidons à chaque étape.</p>
+    </div>
+    <ol class="cesu-steps">
+      <li class="reveal"><h3>Rencontrons-nous</h3><p>Nous prenons rendez-vous avec vous pour parler de votre enfant, répondre à toutes vos questions et choisir le bon répétiteur.</p></li>
+      <li class="reveal"><h3>Créez votre compte Cesu</h3><p>Sur <a href="https://www.cesu.urssaf.fr" target="_blank" rel="noopener">cesu.urssaf.fr</a>, créez votre compte employeur et activez l'avance immédiate de crédit d'impôt pour ne payer que 50 %.</p></li>
+      <li class="reveal"><h3>Signez le contrat de travail</h3><p>Un contrat écrit est obligatoire : il précise les jours, la durée des cours, le tarif et le lieu. Nous vous aidons à le remplir.</p></li>
+      <li class="reveal"><h3>Vérifiez le droit de travailler de l'intervenant</h3><p>Avant le premier cours, vous envoyez à la préfecture des Ardennes, par e-mail ou lettre recommandée, une copie du titre de séjour de l'intervenant (nous vous la remettons). Cette vérification est obligatoire pour tout employeur, au moins 2 jours ouvrables avant l'embauche. Sans réponse de la préfecture dans ce délai, vous pouvez poursuivre.</p></li>
+      <li class="reveal"><h3>Déclarez et réglez chaque mois</h3><p>Chaque mois, vous déclarez les heures de cours sur le site du Cesu. L'Urssaf calcule les cotisations et édite le bulletin de paie.</p></li>
+      <li class="reveal"><h3>Gardez vos justificatifs</h3><p>Conservez les bulletins de paie et l'attestation fiscale annuelle : ils vous servent pour votre déclaration de revenus et votre crédit d'impôt.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section section--white" id="conseils-cesu">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Nos conseils</span>
+      <h2>Pour que tout se passe bien.</h2>
+    </div>
+    <ul class="tips">
+      <li class="reveal">Activez l'avance immédiate dès le début : vous ne payez que la moitié au lieu d'avancer la totalité.</li>
+      <li class="reveal">Déclarez vos heures en début de mois suivant, sans attendre : c'est plus simple et vous n'oublierez rien.</li>
+      <li class="reveal">Gardez bulletins de paie et attestation fiscale : ils vous sont demandés pour le crédit d'impôt.</li>
+      <li class="reveal">Utilisez le simulateur du site du Cesu pour connaître le coût total, cotisations comprises, avant de vous décider.</li>
+      <li class="reveal">Une question ? Écrivez-nous à <a href="mailto:ardennesoutienscolaire08@gmail.com" data-contact="email" data-show-text>ardennesoutienscolaire08@gmail.com</a> : nous vous guidons.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header center reveal">
+      <span class="section-label">Questions</span>
+      <h2>Vos questions sur le CESU.</h2>
+    </div>
+    <div class="faq reveal">
+      <details>
+        <summary>Y a-t-il des frais en plus du tarif horaire ?</summary>
+        <p>Oui : les cotisations sociales, calculées automatiquement par l'Urssaf à partir du salaire. Le simulateur du site du Cesu vous donne le coût total. La moitié de l'ensemble vous revient ensuite en crédit d'impôt.</p>
+      </details>
+      <details>
+        <summary>Je ne suis pas imposable : ai-je droit au crédit d'impôt ?</summary>
+        <p>Oui. Le crédit d'impôt est remboursé même si votre foyer n'est pas imposable.</p>
+      </details>
+      <details>
+        <summary>Suis-je obligé de passer par le CESU ?</summary>
+        <p>C'est notre mode de paiement : vous employez directement l'intervenant, ce qui évite toute commission d'agence et ouvre droit au crédit d'impôt.</p>
+      </details>
+      <details>
+        <summary>Et si nous arrêtons les cours ?</summary>
+        <p>Vous pouvez arrêter les cours. Le contrat précise le préavis éventuel, et nous en parlons ensemble lors du rendez-vous.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2>Prêt à essayer ?</h2>
+      <p>Le premier cours est gratuit et sans engagement. Réservez en 2 minutes, nous vous rappelons.</p>
+      <a href="index.html#reservation" class="btn btn-primary btn-large">📅 Réserver mon cours gratuit</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo"><span class="logo-icon">SSA</span><span class="logo-text">Soutien scolaire<small>dans les Ardennes</small></span></div>
+        <p style="margin-top:15px">Apprendre, comprendre et avancer, dans les études comme dans la vie.</p>
+      </div>
+      <div>
+        <h4>Explorer</h4>
+        <ul>
+          <li><a href="index.html#cours">Nos cours</a></li>
+          <li><a href="index.html#matieres">Matières</a></li>
+          <li><a href="tarifs.html">Tarifs et paiement CESU</a></li>
+          <li><a href="a-propos.html">Qui sommes-nous</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Réserver</h4>
+        <ul>
+          <li><a href="index.html#reservation">Cours gratuit</a></li>
+          <li><a href="index.html#faq">Questions</a></li>
+          <li><a href="mailto:ardennesoutienscolaire08@gmail.com" data-contact="email" data-show-text>ardennesoutienscolaire08@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Informations</h4>
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 Soutien scolaire dans les Ardennes (SSA). Tous droits réservés.</span>
+      <span>Cours à domicile et aide aux devoirs dans les Ardennes.</span>
+    </div>
+  </div>
+</footer>
+<script src="js/config.js"></script>
+<script src="js/content.js"></script>
+<script src="js/tarifs.js"></script>
+<script src="js/legal.js"></script>
+</body>
+</html>
