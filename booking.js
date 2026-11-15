@@ -138,7 +138,7 @@
     if (problem) { errorBox.textContent = problem; return; }
 
     var channel = pickChannel();
-    if (!channel) { errorBox.textContent = "La réservation n'est pas encore configurée (voir js/config.js)."; return; }
+    if (!channel) { errorBox.textContent = "La réservation n'est pas encore configurée (voir config.js)."; return; }
 
     var message = buildMessage();
     var subject = "Premier cours gratuit – " + value("child");

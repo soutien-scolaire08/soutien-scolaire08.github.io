@@ -47,8 +47,8 @@ SSA.config = {
     video: "",
     poster: "",
     photos: [
-      { src: "images/cours-1.jpg", alt: "Un répétiteur explique un exercice à un élève devant l'ordinateur", position: "75% center" },
-      { src: "images/cours-2.jpg", alt: "Un adulte aide un enfant à faire ses devoirs à la maison", position: "center 30%" }
+      { src: "cours-1.jpg", alt: "Un répétiteur explique un exercice à un élève devant l'ordinateur", position: "75% center" },
+      { src: "cours-2.jpg", alt: "Un adulte aide un enfant à faire ses devoirs à la maison", position: "center 30%" }
     ]
   }
 };
