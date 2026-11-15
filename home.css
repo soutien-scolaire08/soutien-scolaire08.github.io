@@ -2,7 +2,7 @@
 .js .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } html { scroll-behavior: auto; } }
 
-.hero { position: relative; isolation: isolate; padding: 120px 0 110px; color: #fff; background: #1f1b4d url("../images/hero-cours.jpg") 72% center / cover no-repeat; }
+.hero { position: relative; isolation: isolate; padding: 120px 0 110px; color: #fff; background: #1f1b4d url("hero-cours.jpg") 72% center / cover no-repeat; }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(24, 20, 70, .94) 0%, rgba(24, 20, 70, .84) 40%, rgba(24, 20, 70, .22) 100%); }
 .hero-content > * { max-width: 660px; }
 .hero h1 { color: #fff; }

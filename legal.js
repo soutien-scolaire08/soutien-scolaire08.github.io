@@ -23,7 +23,7 @@
     if (optional) {
       optional.hidden = true;
     } else {
-      el.textContent = "[À compléter dans js/config.js]";
+      el.textContent = "[À compléter dans config.js]";
       el.classList.add("todo");
     }
   });

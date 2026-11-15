@@ -1,4 +1,4 @@
-.booking { background: linear-gradient(rgba(12, 22, 39, .72), rgba(12, 22, 39, .8)), var(--dark) url("../images/formulaire-ssa.jpg") center / cover no-repeat; color: #fff; border-radius: 34px; padding: 56px; display: grid; grid-template-columns: .82fr 1.18fr; gap: 48px; align-items: center; box-shadow: 0 30px 60px rgba(15, 23, 42, .22); }
+.booking { background: linear-gradient(rgba(12, 22, 39, .72), rgba(12, 22, 39, .8)), var(--dark) url("formulaire-ssa.jpg") center / cover no-repeat; color: #fff; border-radius: 34px; padding: 56px; display: grid; grid-template-columns: .82fr 1.18fr; gap: 48px; align-items: center; box-shadow: 0 30px 60px rgba(15, 23, 42, .22); }
 .booking h2 { color: #fff; }
 .booking-intro { max-width: 420px; }
 .booking-intro p { color: #d9e3f4; margin-top: 14px; }
