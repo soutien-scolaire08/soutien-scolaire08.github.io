@@ -41,4 +41,12 @@ fieldset.field { border: 0; padding: 0; }
 .confirm pre { text-align: left; white-space: pre-wrap; background: #f4f5fa; border-radius: 12px; padding: 14px; font: .85rem/1.5 var(--font); margin: 16px 0 0; }
 
 @media (max-width: 900px) { .booking { grid-template-columns: 1fr; padding: 40px 22px; gap: 34px; } .booking-intro { max-width: none; } .form-card { padding: 24px 18px; } }
-@media (max-width: 520px) { .form-row { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .booking {
+    background-image: linear-gradient(rgba(12, 22, 39, .52), rgba(12, 22, 39, .68)), url("formulaire-ssa.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+  .form-card { background: rgba(255, 255, 255, .98); }
+  .form-row { grid-template-columns: 1fr; }
+}
