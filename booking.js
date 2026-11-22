@@ -53,10 +53,14 @@
     var error = dateError(value("date1"), "la date souhaitée");
     if (error) { return error; }
     if (!value("slot1")) { return "Choisis un créneau horaire."; }
-    if (value("date2") || value("slot2")) {
+
+    // Le second choix est facultatif : on ne le valide et ne l'envoie que s'il est complet.
+    if (value("date2") && value("slot2")) {
       error = dateError(value("date2"), "ton 2e choix");
       if (error) { return error; }
-      if (!value("slot2")) { return "Choisis un créneau pour ton 2e choix."; }
+      if (parseISO(value("date2")) < parseISO(value("date1"))) {
+        return "La date du 2e choix doit être le même jour ou après la date souhaitée.";
+      }
     }
     if (!document.getElementById("consent").checked) { return "Coche la case pour accepter d'être recontacté."; }
     return "";
@@ -75,7 +79,7 @@
       "Lieu : " + checkedValues("mode")[0],
       "Créneau souhaité : " + prettyDate(value("date1")) + ", " + value("slot1")
     ];
-    if (value("date2")) { lines.push("2e choix : " + prettyDate(value("date2")) + ", " + value("slot2")); }
+    if (value("date2") && value("slot2")) { lines.push("2e choix : " + prettyDate(value("date2")) + ", " + value("slot2")); }
     if (value("message")) { lines.push("Message : " + value("message")); }
     return lines.join("\n");
   }
@@ -144,30 +148,36 @@
     var subject = "Premier cours gratuit – " + value("child");
 
     if (channel === "endpoint") {
+      var hasSecondChoice = value("date2") && value("slot2");
       var payload = {
         parent: value("parent"), telephone: value("phone"), email: value("email"),
         enfant: value("child"), niveau: value("level"), matieres: checkedValues("subject").join(", "),
         commune: value("commune"), lieu: checkedValues("mode")[0],
         creneau: prettyDate(value("date1")) + ", " + value("slot1"),
-        creneau2: value("date2") ? prettyDate(value("date2")) + ", " + value("slot2") : "",
+        creneau2: hasSecondChoice ? prettyDate(value("date2")) + ", " + value("slot2") : "",
         message: value("message"), resume: message,
         _subject: subject, _captcha: "false", _template: "table"
       };
       var button = form.querySelector('button[type="submit"]');
       button.disabled = true;
+      button.textContent = "Envoi en cours…";
       fetch(cfg.booking.formEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify(payload)
       }).then(function (response) {
-        return response.json().catch(function () { return {}; }).then(function (data) {
-          var refused = data.success === false || data.success === "false";
-          if (!response.ok || refused) { throw new Error("envoi refusé"); }
+        return response.json().then(function (data) {
+          if (!response.ok || data.success !== true && data.success !== "true") {
+            throw new Error(data.message || "envoi refusé");
+          }
           showConfirmation(true, message);
         });
       }).catch(function () {
-        errorBox.textContent = "L'envoi a échoué. Réessaie, ou contacte-nous directement par téléphone ou par e-mail.";
-      }).then(function () { button.disabled = false; });
+        errorBox.textContent = "L'envoi n'a pas été confirmé. Vérifie ta connexion et réessaie, ou contacte-nous directement par e-mail. Si c'est la première demande, le propriétaire doit aussi confirmer l'adresse de réception auprès de FormSubmit (y compris dans les courriers indésirables).";
+      }).then(function () {
+        button.disabled = false;
+        button.textContent = "📅 Demander mon cours gratuit";
+      });
       return;
     }
 
